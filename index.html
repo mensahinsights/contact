@@ -3,49 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A portfolio showcasing my skills and interests.">
-  <title>Gamal M - Portfolio</title>
-  <link rel="stylesheet" href="/portfolio/styles.css">
+  <title>Gamal M. | Projects & Interests</title>
+  <link rel="stylesheet" href="consolidated.css">
 </head>
 <body>
   <header>
-    <div class="container">
-      <h1>Gamal M</h1>
-      <p>A passionate data analyst, photographer, and explorer</p>
+    <div class="header-left">
+      <img src="https://ik.imagekit.io/aln6sv0af/web-portfolio/g10h_xt1pZtT-qY.jpg?updatedAt=1745845407977" alt="Profile Image" class="profile-img" />
+      <h1>Gamal M.</h1>
+      <p>Data Analyst | Business Intelligence | ML & Analytics | Python • SQL • Power BI | SAS • Process (<i>and Home</i>🏡😅) Automation Expert</p>
     </div>
+    <nav>
+      <ul>
+        <li><a href="#projects" class="btn">Projects</a></li>
+        <li><a href="#skills" class="btn">Skills</a></li>
+        <li><a href="#interests"class="btn">Interests</a></li>
+        <li><a href="contact.html" class="btn">Get In Touch</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <section class="about">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>Hello! I'm Gamal, a data analyst with a love for photography, music, and hiking. I specialize in data-driven decision making, helping businesses optimize their processes through analysis and automation. I'm also passionate about capturing the beauty of the world through photography.</p>
+  <section class="hero">
+    <h2>Hi, I'm Gamal!</h2>
+    <p>Dsata enthusiast turned storyteller - crafting insights and beats alike.</p>
+    <p>This is your space to Dive in to <b>see &#38; experience my work</b>, as well as gain insights into my passions!</p>
+    <p><i>Transforming complex data into actionable insights through analysis, visualization, and strategic thinking.</i></p>
+    <a href="https://drive.google.com/file/d/1QI8ZtSx2Q4h4BsRI8yvBD9xejIdvt1jy/view?usp=sharing" class="btn" target="_blank" download>Download My Resume</a>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2>Featured Projects & Data Explorations</h2>
+    <div class="grid">
+      <a href="prj1rpa20220818.html" class="project-card">
+        <img src="https://ik.imagekit.io/aln6sv0af/web-portfolio/RPA%20Presentation/I2142.jpg?updatedAt=1745871738951" alt="Robotic Process Automation">
+        <h3>Robotic Process Automation | Customer Order Transmit Time UiPath Schedule Automation</h3>
+        <p>This project showcases how UiPath RPA automated a bi-weekly Excel schedule processing, cutting annual workload from 26 hours to 52 minutes, boosting accuracy and user satisfaction..</p>
+      </a>
+      <a href="prj2pbi20250428.html" class="project-card">
+        <img src="https://ik.imagekit.io/aln6sv0af/web-portfolio/pbi20250428090934_XaRZvU0Gy.png?updatedAt=1745845858186" alt="Business Performance Dashboard">
+        <h3>Power BI | Business Performance Dashboard</h3>
+        <p>Explore a dynamic Power BI report with metric switching, YTD vs PYTD comparisons, and high-impact visuals (treemap, waterfall, combo, scatter) to uncover growth areas, pain points and profit centres.</p>
+      </a>
+      <a href="prj3bds20250205.html" class="project-card">
+        <img src="https://ik.imagekit.io/aln6sv0af/web-portfolio/Brainstation%20Capstone/a%20professional-looking%20composite%20image%20showing%20a%20delivery%20vehicle%20alongside%20data%20elements%20(charts,%20graphs).jpg?updatedAt=1745866649127" alt="Data Science Capstone">
+        <h3>Brainstation Data Science Certificate Capstone | Amazon Delivery Time Analysis</h3>
+        <p>Amazon Delivery Time Analysis: Data science project analyzing 43,000+ delivery records to predict delivery times based on weather, location, and traffic. Used Python, Pandas, and scikit-learn to build a Random Forest model (R² = 0.812) revealing key insights about operational efficiency and customer satisfaction factors.</p>
+      </a>
     </div>
   </section>
 
-  <section class="skills">
-    <div class="container">
-      <h2>Skills</h2>
-      <ul>
-        <li>Data Analysis: SQL, Power BI, DAX, Power Query</li>
-        <li>Programming: Python, R, JavaScript</li>
-        <li>Automation: UiPath, Docker, Git</li>
-        <li>Photography: Landscape, Travel, and Portrait Photography</li>
-        <li>Drumming: Passionate about rhythm and percussion</li>
-      </ul>
+  <section id="skills" class="skills">
+    <h2>Technical & Soft Skills</h2>
+    <div class="grid">
+      <div class="skill-card"><h3>Data Analysis</h3><p>Python • SQL • SAS • Power BI</p></div>
+      <div class="skill-card"><h3>Automation</h3><p>UiPath • Shell Scripting</p></div>
+      <div class="skill-card"><h3>Communication</h3><p>Data Visualization • Storytelling • Collaboration • Teamwork</p></div>
+      <div class="skill-card"><h3>Creativity</h3><p>Photography • Drumming</p></div>
     </div>
   </section>
-
-  <section class="interests">
-    <div class="container">
-      <h2>My Interests</h2>
-      <p>When I'm not analyzing data or automating processes, you can find me out in nature, exploring new hiking trails, or capturing stunning photos of landscapes and wildlife. I also love playing the drums, creating music, and connecting with others who share my enthusiasm for adventure and the arts.</p>
-    </div>
+  
+  <section id="interests" class="interests">
+    <h2>Beyond the Screen</h2>
+    <ul class="interests-list">
+      <li>Hiking & Waterfall Photography</li>
+      <li>Drumming & Music Jam Sessions</li>
+      <li>Urban Explorations in Toronto</li>
+      <li>Travel Adventures & Hidden Gems</li>
+    </ul>
   </section>
 
   <footer>
-    <div class="container">
-      <p>&copy; <script>document.write(new Date().getFullYear())</script> Plan G AIT.</p>
-    </div>
+    <p>Made with ☕ and a dash of clever code. Connect on <a href="https://plan-g.github.io/portfolio/" target="_blank" style="color: var(--accent);">GitHub</a> or drop me a <a href="contact.html" target="_blank" style="color: var(--accent);">note</a>.</p>
   </footer>
 </body>
 </html>
