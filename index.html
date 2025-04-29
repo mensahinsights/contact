@@ -4,7 +4,73 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gamal M. | Projects & Interests</title>
-  <link rel="stylesheet" href="consolidated.css">
+  <style>
+    /* ===== Accent Colors ===== */
+    :root { --accent: #1E90FF; --accent-dark: #0D47A1; }
+
+    /* ===== Reset & Base ===== */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; background: #f4f4f4; color: #333; }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    /* ===== Layout ===== */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--accent-dark);
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .header-left { display: flex; align-items: center; gap: 1rem; }
+    .profile-img { width: 104px; height: 104px; object-fit: cover; border-radius: 50%; }
+    header h1 { font-size: 1.5rem; }
+    nav ul { list-style: none; display: flex; gap: 1rem; }
+    nav a { color: #fff; }
+    nav a:hover { color: var(--accent); }
+
+    /* ===== Button ===== */
+    .btn { display: inline-block; background: var(--accent); color: #fff; padding: 0.6rem 1rem; border-radius: 4px; transition: background 0.2s; }
+    .btn:hover { background: var(--accent-dark); }
+
+    /* ===== Hero ===== */
+    .hero { padding: 4rem 2rem; text-align: center; background: url('https://ik.imagekit.io/aln6sv0af/web-portfolio/pexels-weekendplayer-186461.jpg?updatedAt=1745883291405') center/cover no-repeat; color: #fff; }
+    .hero h2 { font-size: 2.5rem; margin-bottom: 0.5rem; color: #ffffff ; }
+    .hero p { font-size: 1.2rem; margin-bottom: 1rem; color:#ffffff }
+
+    /* ===== Section Headings ===== */
+    section h2 { font-size: 2rem; margin-bottom: 1rem; position: relative; }
+    section h2::after { content: ""; display: block; width: 50px; height: 4px; background: var(--accent); margin-top: 0.5rem; }
+
+    section { padding: 3rem 2rem; }
+    .grid { display: grid; gap: 1.5rem; }
+
+    /* ===== Skills ===== */
+    .skills .grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+    .skill-card { background: #fff; border-radius: 8px; padding: 1.5rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center; }
+
+    /* ===== Projects ===== */
+    .projects .grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+    .project-card { background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.2s; display: block; }
+    .project-card:hover { transform: translateY(-5px); border-top: 4px solid var(--accent); }
+    .project-card img { height: 150px; object-fit: cover; }
+    .project-card h3 { margin: 1rem; font-size: 1.2rem; }
+    .project-card p { margin: 0 1rem 1rem; font-size: 0.95rem; }
+
+    /* ===== Interests ===== */
+    .interests ul { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
+    .interests li { background: #fff; padding: 0.8rem 1.2rem; border-radius: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); font-size: 0.9rem; }
+    .interests-list {
+      list-style: none;      /* shorthand for list-style-type: none */
+      padding-left: 0;       /* drop the left indent */
+    }
+    /* ===== Footer ===== */
+    footer { text-align: center; padding: 2rem; font-size: 0.9rem; color: #666; }
+  </style>
 </head>
 <body>
   <header>
@@ -25,10 +91,10 @@
 
   <section class="hero">
     <h2>Hi, I'm Gamal!</h2>
-    <p>Data enthusiast turned storyteller - crafting insights and beats alike.</p>
+    <p>Dsata enthusiast turned storyteller - crafting insights and beats alike.</p>
     <p>This is your space to Dive in to <b>see &#38; experience my work</b>, as well as gain insights into my passions!</p>
-    <p><i>Transforming complex data into actionable insigh<a href="https://drive.google.com/file/d/1QI8ZtSx2Q4h4BsRI8yvBD9xejIdvt1jy/view?usp=sharing" class="btn" target="_blank" download>Download My Resume</a>ts through analysis, visualization, and strategic thinking.</i></p>
-    
+    <p><i>Transforming complex data into actionable insights through analysis, visualization, and strategic thinking.</i></p>
+    <a href="https://drive.google.com/file/d/1QI8ZtSx2Q4h4BsRI8yvBD9xejIdvt1jy/view?usp=sharing" class="btn" target="_blank" download>Download My Resume</a>
   </section>
 
   <section id="projects" class="projects">
@@ -73,7 +139,7 @@
   </section>
 
   <footer>
-    <p>Made with ☕ and a dash of clever code. Connect on <a href="https://plan-g.github.io/portfolio/" target="_blank" style="color: var(--accent);">GitHub</a> or drop me a <a href="contact.html" target="_blank" style="color: var(--accent);">note</a>.</p>
+    <p>Made with ☕ and a dash of clever code. Connect on <a href="https://github.com/plan-g" target="_blank" style="color: var(--accent);">GitHub</a> or drop me a <a href="contact.html" target="_blank" style="color: var(--accent);">note</a>.</p>
   </footer>
 </body>
 </html>
