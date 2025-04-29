@@ -13,6 +13,11 @@
       <h1>Gamal M.</h1>
       <p>Data Analyst | Business Intelligence | ML & Analytics | Python • SQL • Power BI | SAS • Process (<i>and Home</i>🏡😅) Automation Expert</p>
     </div>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>    
     <nav>
       <ul>
         <li><a href="#projects" class="btn">Projects</a></li>
@@ -75,5 +80,12 @@
   <footer>
     <p>Made with ☕ and a dash of clever code. Connect on <a href="https://github.com/plan-g" target="_blank" style="color: var(--accent);">GitHub</a> or drop me a <a href="contact.html" target="_blank" style="color: var(--accent);">note</a>.</p>
   </footer>
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('nav');
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  </script>  
 </body>
 </html>
