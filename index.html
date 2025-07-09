@@ -1,93 +1,525 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gamal M. | Projects & Interests</title>
-  <link rel="stylesheet" href="responsive-consolidated.css">
-</head>
-<body>
-  <div id="overlay"></div>
-  <header>
-    <div class="header-left">
-      <img src="https://ik.imagekit.io/aln6sv0af/web-portfolio/g10h_xt1pZtT-qY.jpg?updatedAt=1745845407977" alt="Profile Image" class="profile-img" />
-      <h1>Gamal M.</h1>
-      <p class="tagline">Data Analyst • Web Developer • Explorer • Visual Storyteller • Process (<i>and Home</i>🏡😅) Automation Expert</p>
-    </div>
-    <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>    
-    <nav id="nav">
-      <ul>
-        <li><a href="#projects" class="btn">Projects</a></li>
-        <li><a href="#skills" class="btn">Skills</a></li>
-        <li><a href="#interests"class="btn">Interests</a></li>
-        <li><a href="contact.html" class="btn">Get In Touch</a></li>
-      </ul>
-    </nav>
-  </header>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
 
-  <section class="hero">
-    <h2>Hi, I'm Gamal!</h2>
-    <p>Data enthusiast turned storyteller - crafting insights and beats alike.</p>
-    <p>This is your space to Dive in to <b>see &#38; experience my work</b>, as well as gain insights into my passions!</p>
-    <p><i>Transforming complex data into actionable insights through analysis, visualization, and strategic thinking.</i></p>
-    <a href="https://drive.google.com/file/d/1QI8ZtSx2Q4h4BsRI8yvBD9xejIdvt1jy/view?usp=sharing" class="btn" target="_blank" download>Download My Resume</a>
-  </section>
+    <title>Gamal Mensah | Data Analyst | Exploratory Data Analysis BI Insights Developer</title>
+<!--
+Reflux Template
+https://templatemo.com/tm-531-reflux
+-->
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
-  <section id="projects" class="projects">
-    <h2>Featured Projects & Data Explorations</h2>
-    <div class="grid">
-      <a href="prj1rpa20220818.html" class="project-card">
-        <img src="https://ik.imagekit.io/aln6sv0af/web-portfolio/OrderSync%20Pro%20-%20Seamless%20automation%20for%20optimized%20customer%20fulfillment%20cycles/I2142.jpg?updatedAt=1746045069465" alt="Robotic Process Automation">
-        <h3>OrderSync Pro - Seamless automation for optimized customer fulfillment cycles</h3>
-        <p>This project showcases how UiPath RPA automated a bi-weekly Excel schedule processing, cutting annual workload from 26 hours to 52 minutes, boosting accuracy and user satisfaction.</p>
-      </a>
-      <a href="prj2pbi20250428.html" class="project-card">
-        <img src="https://ik.imagekit.io/aln6sv0af/web-portfolio/Vantage%20Strategic%20Business%20Performance%20Navigator%20Dashboard/vsbpnd2.jpg?updatedAt=1746890306361" alt="Business Performance Dashboard">
-        <h3>Power BI | Vantage - Strategic Business Performance Navigator Dashboard</h3>
-        <p>Explore a dynamic Power BI report with metric switching, YTD vs PYTD comparisons, and high-impact visuals (treemap, waterfall, combo, scatter) to uncover growth areas, pain points and profit centres.</p>
-      </a>
-      <a href="prj3bds20250205.html" class="project-card">
-        <img src="https://ik.imagekit.io/aln6sv0af/web-portfolio/Delivery%20Metrics%20Uncovering%20Patterns%20in%20Amazon%20Shipping%20Network/a108s.jpg?updatedAt=1746377859123" alt="Data Science Capstone">
-        <h3>DeliveryMetrics: Uncovering Patterns in Amazon's Shipping Network</h3>
-        <p>Amazon Delivery Time Analysis: Data science project analyzing 43,000+ delivery records to predict delivery times based on weather, location, and traffic. Used Python, Pandas, and scikit-learn to build a Random Forest model (R² = 0.812) revealing key insights about operational efficiency and customer satisfaction factors.</p>
-      </a>
-      <a href="prj4tms20200606.html" class="project-card">
-        <img src="https://ik.imagekit.io/aln6sv0af/web-portfolio/web%20development%20trinity%20montessori%20school/srmv2.png?updatedAt=1746539454885" alt="Trinity Montessori School Website Redesign">
-        <h3>Trinity Montessori School Website Redesign</h3>
-        <p>Trinity Montessori School needed a modern website that reflected its commitment to early childhood education while remaining easy for staff to update. Their outdated design, poor mobile experience, and cluttered content structure were no longer serving the needs of prospective parents or current families.</p>
-      </a>      
-    </div>
-  </section>
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="assets/css/templatemo-style.css" />
+    <link rel="stylesheet" href="assets/css/owl.css" />
+    <link rel="stylesheet" href="assets/css/lightbox.css" />
+  </head>
 
-  <section id="skills" class="skills">
-    <h2>Technical & Soft Skills</h2>
-    <div class="grid">
-      <div class="skill-card"><h3>Data Analysis</h3><p>Python • SQL • SAS • Power BI</p></div>
-      <div class="skill-card"><h3>Automation</h3><p>UiPath • Shell Scripting</p></div>
-      <div class="skill-card"><h3>Communication</h3><p>Data Visualization • Storytelling • Web Development • Collaboration • Teamwork</p></div>
-      <div class="skill-card"><h3>Creativity</h3><p>Photography • Drumming</p></div>
+  <body>
+    <div id="page-wraper">
+      <!-- Sidebar Menu -->
+      <div class="responsive-nav">
+        <i class="fa fa-bars" id="menu-toggle"></i>
+        <div id="menu" class="menu">
+          <i class="fa fa-times" id="menu-close"></i>
+          <div class="container">
+            <div class="image">
+              <a href="#"><img src="https://ik.imagekit.io/aln6sv0af/web-portfolio/Headshots/gnm2b.jpg?updatedAt=1752019978096" alt="" /></a>
+            </div>
+            <div class="author-content">
+              <h4>Gama Mensah</h4>
+              <span>Data Analyst</span>
+            </div>
+            <nav class="main-nav" role="navigation">
+              <ul class="main-menu">
+                <li><a href="#section1">About Me</a></li>
+                <li><a href="#section3">My Work</a></li>
+                <li><a href="#section2">How I Turn Data Into Impact</a></li>
+                <li><a href="#section4">Contact Me</a></li>
+              </ul>
+            </nav>
+            <div class="social-network">
+              <ul class="soial-icons">
+                <li>
+                  <a href="https://www.linkedin.com/in/gamalmensah"><i class="fa fa-linkedin"></i></a>
+                </li>
+                <li>
+                  <a href="https://plan-g.github.io/portfolio"><i class="fa fa-github"></i></a>
+                </li>
+              </ul>
+            </div>
+            <div class="copyright-text">
+              <p>Copyright 2025 | Gamal Mensah | Data Analyst</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="section about-me" data-section="section1">
+        <div class="container">
+          <div class="section-heading">
+            <h2>About Me</h2>
+            <div class="line-dec"></div>
+            <span
+              >
+              <h3 class="h2 about-title">Hi, I’m Gamal</h2>
+              <h3 class="h3 about-title">Data Analyst | Exploratory Data Analysis BI Insights Developer</h3>
+              
+              <p><h4 class="h5 about-subtitle">Turning Data Into Actionable Insights</h4></p>
+          <p>I help teams make smarter decisions faster with data they can actually use. Based in Toronto, I’m a Data Analyst with a background in economics and a track record of turning disparate complex cross-functional data into insights that drive product, marketing, and transformation initiatives.</p>
+          <p>Whether I’m building executive-ready dashboards in Power BI, optimising reporting pipelines with SQL, Python, and Power Query, or running statistical analysis in SAS and Excel to support strategic planning, I focus on one thing, making data make sense so teams can act on it.</p>
+          <p>I’ve worked across product development, consumer insights, and operational change, always with the goal of delivering analysis that’s clear, business-ready, and tied to outcomes.</p>
+         
+              </span
+            >
+          </div>
+          <!--
+          <div class="left-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-image">
+                  <img src="assets/images/left-image.jpg" alt="" />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-text">
+                  <h4>Reflux HTML CSS Template</h4>
+                  <p>
+                    Donec tristique feugiat lacus, at sollicitudin nunc euismod
+                    sed. Mauris viverra, erat non sagittis gravida, elit dui
+                    mollis ante, sit amet eleifend purus ligula eget eros. Sed
+                    tincidunt quam vitae neque pharetra dignissim eget ut
+                    libero.
+                  </p>
+                  <div class="white-button">
+                    <a href="#">Read More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        -->  
+          <!--       
+          <div class="right-image-post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="left-text">
+                  <h4>Sed sagittis rhoncus velit</h4>
+                  <p>
+                    Pellentesque habitant morbi tristique senectus et netus et
+                    malesuada fames ac turpis egestas. Vestibulum fermentum
+                    eleifend nibh, vitae sodales elit finibus pretium.
+                    Suspendisse potenti. Ut sollicitudin risus a sollicitudin
+                    semper.
+                  </p>
+                  <div class="white-button">
+                    <a href="#">Read More</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="right-image">
+                  <img src="assets/images/right-image.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+-->
+
+        </div>
+      </section>
+
+      <section class="section my-work" data-section="section3">
+        <div class="container">
+          <div class="section-heading">
+            <h2>My Work</h2>
+            <div class="line-dec"></div>
+            <span
+              >Update in progress. Please check back later for my portfolio of work.</span
+            >
+              
+            </span>
+          </div>
+
+<!--
+
+          <div class="row">
+            <div class="isotope-wrapper">
+              <form class="isotope-toolbar">
+                <label
+                  ><input
+                    type="radio"
+                    data-type="*"
+                    checked=""
+                    name="isotope-filter"
+                  />
+                  <span>all</span></label
+                >
+                <label
+                  ><input
+                    type="radio"
+                    data-type="people"
+                    name="isotope-filter"
+                  />
+                  <span>people</span></label
+                >
+                <label
+                  ><input
+                    type="radio"
+                    data-type="nature"
+                    name="isotope-filter"
+                  />
+                  <span>nature</span></label
+                >
+                <label
+                  ><input
+                    type="radio"
+                    data-type="animals"
+                    name="isotope-filter"
+                  />
+                  <span>animals</span></label
+                >
+              </form>
+              <div class="isotope-box">
+                <div class="isotope-item" data-type="nature">
+                  <figure class="snip1321">
+                    <img
+                      src="assets/images/portfolio-01.jpg"
+                      alt="sq-sample26"
+                    />
+                    <figcaption>
+                      <a
+                        href="assets/images/portfolio-01.jpg"
+                        data-lightbox="image-1"
+                        data-title="Caption"
+                        ><i class="fa fa-search"></i
+                      ></a>
+                      <h4>First Title</h4>
+                      <span>free to use our template</span>
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="isotope-item" data-type="people">
+                  <figure class="snip1321">
+                    <img
+                      src="assets/images/portfolio-02.jpg"
+                      alt="sq-sample26"
+                    />
+                    <figcaption>
+                      <a
+                        href="assets/images/portfolio-02.jpg"
+                        data-lightbox="image-1"
+                        data-title="Caption"
+                        ><i class="fa fa-search"></i
+                      ></a>
+                      <h4>Second Title</h4>
+                      <span>please tell your friends</span>
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="isotope-item" data-type="animals">
+                  <figure class="snip1321">
+                    <img
+                      src="assets/images/portfolio-03.jpg"
+                      alt="sq-sample26"
+                    />
+                    <figcaption>
+                      <a
+                        href="assets/images/portfolio-03.jpg"
+                        data-lightbox="image-1"
+                        data-title="Caption"
+                        ><i class="fa fa-search"></i
+                      ></a>
+                      <h4>Item Third</h4>
+                      <span>customize anything</span>
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="isotope-item" data-type="people">
+                  <figure class="snip1321">
+                    <img
+                      src="assets/images/portfolio-04.jpg"
+                      alt="sq-sample26"
+                    />
+                    <figcaption>
+                      <a
+                        href="assets/images/portfolio-04.jpg"
+                        data-lightbox="image-1"
+                        data-title="Caption"
+                        ><i class="fa fa-search"></i
+                      ></a>
+                      <h4>Item Fourth</h4>
+                      <span>Re-distribution not allowed</span>
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="isotope-item" data-type="nature">
+                  <figure class="snip1321">
+                    <img
+                      src="assets/images/portfolio-05.jpg"
+                      alt="sq-sample26"
+                    />
+                    <figcaption>
+                      <a
+                        href="assets/images/portfolio-05.jpg"
+                        data-lightbox="image-1"
+                        data-title="Caption"
+                        ><i class="fa fa-search"></i
+                      ></a>
+                      <h4>Fifth Awesome</h4>
+                      <span>Ut sollicitudin risus</span>
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="isotope-item" data-type="animals">
+                  <figure class="snip1321">
+                    <img
+                      src="assets/images/portfolio-06.jpg"
+                      alt="sq-sample26"
+                    />
+                    <figcaption>
+                      <a
+                        href="assets/images/portfolio-06.jpg"
+                        data-lightbox="image-1"
+                        data-title="Caption"
+                        ><i class="fa fa-search"></i
+                      ></a>
+                      <h4>Awesome Sixth</h4>
+                      <span>Donec eget massa ante</span>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        -->
+
+        </div>
+      </section>
+
+      <section class="section my-services" data-section="section2">
+        <div class="container">
+          <div class="section-heading">
+            <!--<h2>What I’m good at?</h2>-->
+            <h2>How I Turn Data Into Impact</h2>
+            <div class="line-dec"></div>
+            <span
+              >Curabitur leo felis, rutrum vitae varius eu, malesuada a tortor.
+              Vestibulum congue leo et tellus aliquam, eu viverra nulla semper.
+              Nullam eu faucibus diam. Donec eget massa ante.</span
+            >
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="service-item">
+                <div class="first-service-icon service-icon"></div>
+                <h4>Data Cleaning & Processing</h4>
+                <h5>Clean, scalable, analysis-ready data that actually gets used</h5>
+                <p>
+I build efficient data prep workflows using tools like Excel, Power Query, SQL, and Python to transform messy, inconsistent datasets into structured, reliable inputs. Whether automating monthly reports or preparing source data for dashboards and models, I create scalable processes that reduce manual effort and fuel confident, decision-ready analysis.
+                
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="service-item">
+                <div class="second-service-icon service-icon"></div>
+                <h4>Exploratory Analysis & Trend Detection</h4>
+                <h5>Uncover the signals behind the noise</h5>
+                <p>
+I use Python, SAS, Excel, and SQL to explore datasets, surface hidden patterns, and dig into the “why” behind business trends. From detecting behavioural shifts to identifying outliers and seasonality, I focus on analysis that’s timely, targeted, and useful—helping stakeholders see what’s changing and where to act next.
+                
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="service-item">
+                <div class="third-service-icon service-icon"></div>
+                <h4>Data Visualization</h4>
+                <h5>Turn complexity into clarity for the people who need to act on it</h5>
+                <p>
+                 I design Power BI dashboards and Excel-based reporting tools that turn raw numbers into focused, business-ready stories. From performance deep dives to market tracking, I tailor visuals to stakeholder priorities—making insights easy to understand, explore, and act on without needing a data dictionary.
+                
+
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="service-item">
+                <div class="fourth-service-icon service-icon"></div>
+                <h4>Project Execution & Stakeholder Communication</h4>
+                <h5>Analysis means nothing if it doesn’t land</h5>
+                <p>
+                  I lead cross-functional delivery with Agile discipline, using tools like Power BI, Excel, and Power Query to prototype quickly and adapt to shifting priorities. I bridge the gap between technical analysis and stakeholder impact—turning requirements into action plans and findings into clear, confident recommendations.
+                
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <section class="section contact-me" data-section="section4">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Contact Me</h2>
+            <div class="line-dec"></div>
+            <!--
+            <span
+              >Fusce eget nibh nec justo interdum condimentum. Morbi justo ex,
+              efficitur at ante ac, tincidunt maximus ligula. Lorem ipsum dolor
+              sit amet, consectetur adipiscing elit.</span
+            >
+          -->
+          </div>
+          <div class="row">
+            <div class="right-content">
+              <div class="container">
+                <form id="contact" action="" method="post">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <fieldset>
+                        <input
+                          name="name"
+                          type="text"
+                          class="form-control"
+                          id="name"
+                          placeholder="Your name..."
+                          required=""
+                        />
+                      </fieldset>
+                    </div>
+                    <div class="col-md-6">
+                      <fieldset>
+                        <input
+                          name="email"
+                          type="text"
+                          class="form-control"
+                          id="email"
+                          placeholder="Your email..."
+                          required=""
+                        />
+                      </fieldset>
+                    </div>
+                    <div class="col-md-12">
+                      <fieldset>
+                        <input
+                          name="subject"
+                          type="text"
+                          class="form-control"
+                          id="subject"
+                          placeholder="Subject..."
+                          required=""
+                        />
+                      </fieldset>
+                    </div>
+                    <div class="col-md-12">
+                      <fieldset>
+                        <textarea
+                          name="message"
+                          rows="6"
+                          class="form-control"
+                          id="message"
+                          placeholder="Your message..."
+                          required=""
+                        ></textarea>
+                      </fieldset>
+                    </div>
+                    <div class="col-md-12">
+                      <fieldset>
+                        <button type="submit" id="form-submit" class="button">
+                          Send Message
+                        </button>
+                      </fieldset>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
-  </section>
-  
-  <section id="interests" class="interests">
-    <h2>Beyond the Screen</h2>
-    <ul class="interests-list">
-      <li>Hiking & Waterfall Photography</li>
-      <li>Drumming & Music Jam Sessions</li>
-      <li>Urban Explorations in Toronto</li>
-      <li>Travel Adventures & Hidden Gems</li>
-    </ul>
-  </section>
-  
-  <footer>
-    <p><div class="contra-hire-me-button" data-analyticsUserId="8828e352-24da-4313-89a1-78350adc4e36" data-theme="dark" data-username="g_mensah_67czc31i"></div><script async src="https://contra.com/static/embed/sdk.js" charset="utf-8"></script></p>
-    <p>Made with ☕ and a dash of clever code. Connect on <a href="https://github.com/plan-g" target="_blank" style="color: var(--accent);">GitHub</a> or drop me a <a href="contact.html" target="_blank" style="color: var(--accent);">note</a>.</p>
-  </footer>
-  <script src="script.js"></script>
-  
-</body>
+
+    <!-- Scripts -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script>
+      //according to loftblog tut
+      $(".main-menu li:first").addClass("active");
+
+      var showSection = function showSection(section, isAnimate) {
+        var direction = section.replace(/#/, ""),
+          reqSection = $(".section").filter(
+            '[data-section="' + direction + '"]'
+          ),
+          reqSectionPos = reqSection.offset().top - 0;
+
+        if (isAnimate) {
+          $("body, html").animate(
+            {
+              scrollTop: reqSectionPos
+            },
+            800
+          );
+        } else {
+          $("body, html").scrollTop(reqSectionPos);
+        }
+      };
+
+      var checkSection = function checkSection() {
+        $(".section").each(function() {
+          var $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+          if (topEdge < wScroll && bottomEdge > wScroll) {
+            var currentId = $this.data("section"),
+              reqLink = $("a").filter("[href*=\\#" + currentId + "]");
+            reqLink
+              .closest("li")
+              .addClass("active")
+              .siblings()
+              .removeClass("active");
+          }
+        });
+      };
+
+      $(".main-menu").on("click", "a", function(e) {
+        e.preventDefault();
+        showSection($(this).attr("href"), true);
+      });
+
+      $(window).scroll(function() {
+        checkSection();
+      });
+    </script>
+  </body>
 </html>
