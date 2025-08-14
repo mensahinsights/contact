@@ -305,7 +305,7 @@
         }
         
     </style>
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js"></script>   
+
 </head>
 <body>
     <div class="container">
@@ -470,30 +470,97 @@
     </script>
 -->
 <script>
+<script>
 (function () {
   const form = document.getElementById('contact-form');
   const status = document.getElementById('form-status');
 
+  // Wait for a fresh Turnstile token
+  function getFreshTurnstileToken() {
+    return new Promise((resolve, reject) => {
+      if (!window.turnstile) return reject(new Error('Turnstile not loaded'));
+
+      // Ask Turnstile to generate a new token
+      window.turnstile.reset(); // clear any old token
+      let finished = false;
+
+      // When api.js renders the widget it injects a hidden input named cf-turnstile-response
+      // We also hook the onSuccess callback to capture the fresh token
+      const onToken = (token) => {
+        if (finished) return;
+        finished = true;
+        resolve(token);
+      };
+
+      try {
+        // If your widget is in "managed" mode (the default), execute() will refresh it
+        window.turnstile.execute(undefined, { action: 'contact', callback: onToken });
+      } catch (e) {
+        // Fallback: poll the hidden input for a few seconds
+        const started = Date.now();
+        const iv = setInterval(() => {
+          const t = document.querySelector('[name="cf-turnstile-response"]')?.value;
+          if (t) {
+            clearInterval(iv);
+            if (!finished) {
+              finished = true;
+              resolve(t);
+            }
+          } else if (Date.now() - started > 8000) {
+            clearInterval(iv);
+            reject(new Error('Token timeout'));
+          }
+        }, 150);
+      }
+    });
+  }
+
+  async function submitOnce() {
+    status.textContent = 'Sending...';
+    const data = new FormData(form);
+
+    // Always fetch a fresh token immediately before sending
+    const token = await getFreshTurnstileToken();
+    data.set('cf-turnstile-response', token);
+
+    const res = await fetch(form.action, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    let body = {};
+    try { body = await res.json(); } catch {}
+    return { res, body };
+  }
+
   async function handleSubmit(e) {
     e.preventDefault();
-    status.textContent = 'Sending...';
-
-    const data = new FormData(form);
-    const token = document.querySelector('[name="cf-turnstile-response"]')?.value;
-    if (token) data.set('cf-turnstile-response', token);
 
     try {
-      const res = await fetch(form.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } });
-      const body = await res.json().catch(() => ({}));
+      // First attempt
+      let { res, body } = await submitOnce();
+
+      // If token was stale or reused, refresh and retry exactly once
+      const msg = body?.errors?.map?.(e => e.message)?.join(', ') || '';
+      const tokenFault = /turnstile/i.test(msg) || /timeout-or-duplicate/i.test(msg);
+
+      if ((!res.ok && tokenFault) || /timeout-or-duplicate/i.test(msg)) {
+        // Retry with a brand new token
+        ({ res, body } = await submitOnce());
+      }
+
       if (res.ok && body.success) {
         form.reset();
         if (window.turnstile) window.turnstile.reset();
         status.textContent = 'Thanks, your message has been sent.';
-      } else {
-        status.textContent = body.errors?.map(e => e.message).join(', ') || 'Something went wrong. Please try again.';
-        if (window.turnstile) window.turnstile.reset();
+        return;
       }
-    } catch {
+
+      const errMsg = body.errors?.map(e => e.message).join(', ') || 'Something went wrong. Please try again.';
+      status.textContent = errMsg;
+      if (window.turnstile) window.turnstile.reset();
+    } catch (err) {
       status.textContent = 'Network error. Please try again.';
       if (window.turnstile) window.turnstile.reset();
     }
@@ -502,5 +569,6 @@
   form.addEventListener('submit', handleSubmit);
 })();
 </script>
+
 </body>
 </html>
