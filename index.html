@@ -305,12 +305,7 @@
         }
         
     </style>
-    <script src="https://www.google.com/recaptcha/api.js"></script>
-    <script>
-        function onSubmit() {
-            document.getElementById("contact-form").submit()
-        }
-    </script>    
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js"></script>   
 </head>
 <body>
     <div class="container">
@@ -429,10 +424,10 @@
                         
                         <!-- Optional: tag or subject to help your inbox rules -->
                         <input type="hidden" name="_subject" value="Website contact - GitHub Pages">
+
+                        <div class="cf-turnstile" data-sitekey="0x4AAAAAABrtQnGxdQd_-7gQ" style="margin-bottom: 1rem;"></div>                        
                         
-                        <!-- <button type="submit">Send message</button> -->
-                        <button class="g-recaptcha" data-sitekey="6LeIFKYrAAAAAJh3YUiziBJp6Vs86H2_F6Lre0Dw"
-            data-callback='onSubmit' data-action='submit'>Submit</button>
+                        <button type="submit">Send message</button>
                         <p id="form-status" role="status"></p>
                     </form>
                 </div>
@@ -443,7 +438,7 @@
             <p>&copy; 2025 Gamal Mensah, Data Analyst | <a href="https://mensahinsights.ca" style="color: white; text-decoration: none;">MensahInsights.ca</a></p>
         </div>
     </div>
-
+<!-->
     <script>
         // Progressive enhancement, keeps user on-page with a friendly status
         (function () {
@@ -482,5 +477,7 @@
             form.addEventListener('submit', handleSubmit);
         })();
     </script>
+-->
+    <script src="config.js"></script>
 </body>
 </html>
