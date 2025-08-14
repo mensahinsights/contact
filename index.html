@@ -305,6 +305,12 @@
         }
         
     </style>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script>
+        function onSubmit() {
+            document.getElementById("contact-form").submit()
+        }
+    </script>    
 </head>
 <body>
     <div class="container">
@@ -424,8 +430,13 @@
                         <!-- Optional: tag or subject to help your inbox rules -->
                         <input type="hidden" name="_subject" value="Website contact - GitHub Pages">
                         
-                        <button type="submit">Send message</button>
+                    <!--    <button type="submit">Send message</button> -->
+
+                        <button class="g-recaptcha" data-sitekey="reCAPTCHA_site_key" data-callback='onSubmit' data-action='submit'>Send Message</button>
+
                         <p id="form-status" role="status"></p>
+
+                        
                     </form>
                 </div>
             </div>
