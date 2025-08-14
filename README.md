@@ -1,4 +1,4 @@
-# MensahInsights.ca
+# MensahInsights
 
 > **Data Analytics & Business Intelligence**
 
