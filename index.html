@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamal Mensah - Data Analyst | MensahInsights.ca on GitHub </title>
+    <meta name="description" content="Gamal Mensah, Data Analyst in Toronto. Specialising in Power BI, SQL, and process automation to turn your data challenges into business wins.">
+    <style>
+        :root {
+            --md-primary-fg-color: #2563eb;
+            --md-primary-bg-color: #ffffff;
+            --md-default-bg-color: #ffffff;
+            --md-default-fg-color: #1f2937;
+            --md-default-fg-color--lightest: #e5e7eb;
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --md-primary-fg-color: #3b82f6;
+                --md-primary-bg-color: #111827;
+                --md-default-bg-color: #111827;
+                --md-default-fg-color: #f9fafb;
+                --md-default-fg-color--lightest: #374151;
+            }
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: var(--md-default-bg-color);
+            color: var(--md-default-fg-color);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            padding: 2rem;
+            margin: auto;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--md-primary-fg-color);
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            display: inline-block;
+        }
+        
+        .tagline {
+            color: var(--md-default-fg-color);
+            opacity: 0.8;
+            font-size: 1.1rem;
+            margin: 0;
+        }
+        
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            gap: 4rem;
+            align-items: start;
+        }
+        
+        .content-left {
+            padding-right: 2rem;
+        }
+        
+        .form-right {
+            position: sticky;
+            top: 2rem;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin: 0 0 1rem 0;
+            color: var(--md-default-fg-color);
+            font-weight: 700;
+        }
+        
+        .intro {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--md-primary-fg-color);
+            font-weight: 500;
+        }
+        
+        .section {
+            margin-bottom: 3rem;
+        }
+        
+        h2 {
+            font-size: 1.5rem;
+            margin: 0 0 1rem 0;
+            color: var(--md-default-fg-color);
+            font-weight: 600;
+        }
+        
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+        
+        .skill-tag {
+            background: var(--md-primary-fg-color);
+            color: var(--md-primary-bg-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 1rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        
+        .highlight-box {
+            background: var(--md-default-bg-color);
+            border: 1px solid var(--md-default-fg-color--lightest);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .form-card {
+            background: var(--md-default-bg-color);
+            border: 1px solid var(--md-default-fg-color--lightest);
+            border-radius: 0.8rem;
+            padding: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 0 0 1.5rem 0;
+            color: var(--md-default-fg-color);
+        }
+        
+        .md-typeset label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--md-default-fg-color);
+        }
+        
+        #contact-form input[type="text"],
+        #contact-form input[type="email"],
+        #contact-form textarea {
+            width: 100%;
+            box-sizing: border-box;
+            padding: .6rem .75rem;
+            border: 1px solid var(--md-default-fg-color--lightest);
+            border-radius: .4rem;
+            background: var(--md-default-bg-color);
+            color: var(--md-default-fg-color);
+            margin: .25rem 0 1rem 0;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.2s ease;
+        }
+        
+        #contact-form input[type="text"]:focus,
+        #contact-form input[type="email"]:focus,
+        #contact-form textarea:focus {
+            outline: none;
+            border-color: var(--md-primary-fg-color);
+        }
+        
+        #contact-form textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        #contact-form button[type="submit"] {
+            cursor: pointer;
+            padding: .8rem 2rem;
+            border: 0;
+            border-radius: .4rem;
+            background: var(--md-primary-fg-color);
+            color: var(--md-primary-bg-color);
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            width: 100%;
+        }
+        
+        #contact-form button[type="submit"]:hover {
+            filter: brightness(1.05);
+            transform: translateY(-1px);
+        }
+        
+        #contact-form button[type="submit"]:active {
+            transform: translateY(0);
+        }
+        
+        #form-status {
+            font-weight: 500;
+            margin-top: 1rem !important;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--md-default-fg-color--lightest);
+            opacity: 0.7;
+        }
+        
+        @media (max-width: 1024px) {
+            .main-content {
+                grid-template-columns: 1fr 350px;
+                gap: 3rem;
+            }
+            
+            .content-left {
+                padding-right: 1rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .main-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .content-left {
+                padding-right: 0;
+            }
+            
+            .form-right {
+                position: static;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .skills {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="/" class="logo">MensahInsights.ca</a>
+            <p class="tagline">Data Analytics & Business Intelligence</p>
+        </div>
+        
+        <div class="main-content">
+            <div class="content-left">
+                <h1>Hello, I'm Gamal</h1>
+                <p class="intro">Data Analyst helping Toronto businesses turn their data challenges into competitive advantages.</p>
+
+                <div class="section">
+                    <h2>What I Do</h2>
+                    <p>I specialise in transforming complex data into clear, actionable insights that drive real business decisions. Whether you're drowning in spreadsheets, need crystal-clear dashboards, or want to automate those time-consuming manual processes, I help businesses across Toronto unlock the stories hiding in their numbers.</p>
+                    
+                    <div class="skills">
+                        <span class="skill-tag">Power BI</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Excel</span>
+                        <span class="skill-tag">Process Automation</span>
+                        <span class="skill-tag">Data Visualisation</span>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>How I Help</h2>
+                    
+                    <p><strong>Dashboard Development:</strong> Building Power BI dashboards that actually make sense, turning your raw data into visual stories that guide decision-making.</p>
+                    
+                    <p><strong>Data Analysis & Insights:</strong> Writing SQL queries that find the needles in your data haystacks, uncovering patterns and trends you didn't know existed.</p>
+                    
+                    <p><strong>Process Automation:</strong> Eliminating those soul-crushing manual tasks with smart automation solutions that save time and reduce errors.</p>
+                    
+                    <p><strong>Strategic Consultation:</strong> Working alongside your team to identify opportunities where data can solve real business problems.</p>
+                </div>
+
+                <div class="highlight-box">
+                    <h2>Why Work With Me</h2>
+                    <p>I speak human, not data-geek. My approach focuses on delivering insights you can actually use, with flexible engagement options from quick problem-solving sessions to comprehensive project delivery. I have a proven track record of delivering real results, from streamlined processes to genuine cost savings.</p>
+                </div>
+
+                <div class="section">
+                    <h2>Ready to Get Started?</h2>
+                    <p>Got a project keeping you up at night? A spreadsheet that's grown into a monster? Or perhaps you're sitting on a goldmine of data but aren't quite sure how to dig in?</p>
+                    
+                    <p>Drop me a line using the form on the right with details about your challenge. I'll get back to you within two business days, and if it sounds like a good fit, we'll arrange a no-strings chat to explore what's possible.</p>
+                    
+                    <p><em>Your data has stories to tell. Let's uncover them together.</em></p>
+                </div>
+            </div>
+            
+            <div class="form-right">
+                <div class="form-card">
+                    <h2 class="form-title">Get In Touch</h2>
+                    <p style="margin-top: 0; opacity: 0.8; font-size: 0.9rem;">I usually reply within one or two business days.</p>
+                    
+                    <form id="contact-form" action="https://formspree.io/f/xxxxxx" method="POST" class="md-typeset">
+                        <label for="name">Name</label>
+                        <input id="name" name="name" type="text" required placeholder="Your name">
+                        
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" required placeholder="you@example.com">
+                        
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" required placeholder="Tell me about your project or data challenge..."></textarea>
+                        
+                        <!-- Simple spam honeypot, keep hidden -->
+                        <input type="text" name="_gotcha" style="display:none">
+                        
+                        <!-- Optional: tag or subject to help your inbox rules -->
+                        <input type="hidden" name="_subject" value="Website contact - GitHub Pages">
+                        
+                        <button type="submit">Send message</button>
+                        <p id="form-status" role="status"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>&copy; 2025 Gamal Mensah | MensahInsights.ca</p>
+        </div>
+    </div>
+
+    <script>
+        // Progressive enhancement, keeps user on-page with a friendly status
+        (function () {
+            const form = document.getElementById('contact-form');
+            const status = document.getElementById('form-status');
+            
+            async function handleSubmit(e) {
+                e.preventDefault();
+                status.textContent = 'Sending...';
+                status.style.color = 'var(--md-default-fg-color)';
+                
+                const data = new FormData(form);
+                
+                try {
+                    const res = await fetch(form.action, {
+                        method: 'POST',
+                        headers: { 'Accept': 'application/json' },
+                        body: data
+                    });
+                    
+                    if (res.ok) {
+                        form.reset();
+                        status.textContent = 'Thanks, your message has been sent.';
+                        status.style.color = 'var(--md-primary-fg-color)';
+                    } else {
+                        const err = await res.json().catch(() => ({}));
+                        status.textContent = err.errors ? err.errors.map(e => e.message).join(', ') : 'Something went wrong. Please try again.';
+                        status.style.color = '#ef4444';
+                    }
+                } catch (err) {
+                    status.textContent = 'Network error. Please try again.';
+                    status.style.color = '#ef4444';
+                }
+            }
+            
+            form.addEventListener('submit', handleSubmit);
+        })();
+    </script>
+</body>
+</html>
