@@ -408,28 +408,19 @@
                 <div class="form-card">
                     <h2 class="form-title">Get In Touch</h2>
                     <p style="margin-top: 0; opacity: 0.8; font-size: 0.9rem;">I'll get back to you within two business days.</p>
-                    
-                    <form id="contact-form" action="https://red-term-4063.gnsm66.workers.dev/contact" method="POST" class="md-typeset">
-                        <label for="name">Name</label>
-                        <input id="name" name="name" type="text" required placeholder="Your name">
-                        
-                        <label for="email">Email</label>
-                        <input id="email" name="email" type="email" required placeholder="you@example.com">
-                        
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="6" required placeholder="Tell me about your project or data challenge..."></textarea>
-                        
-                        <!-- Simple spam honeypot, keep hidden -->
-                        <input type="text" name="_gotcha" style="display:none">
-                        
-                        <!-- Optional: tag or subject to help your inbox rules -->
-                        <input type="hidden" name="_subject" value="Website contact - GitHub Pages">
 
-                        <div class="cf-turnstile" data-sitekey="0x4AAAAAABrtQnGxdQd_-7gQ" style="margin-bottom: 1rem;"></div>                        
-                        
-                        <button type="submit">Send message</button>
-                        <p id="form-status" role="status"></p>
-                    </form>
+<form id="contact-form" action="https://red-term-4063.gnsm66.workers.dev/contact" method="POST">
+  <input type="text" name="name" required>
+  <input type="email" name="email" required>
+  <textarea name="message" required></textarea>
+
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  <div class="cf-turnstile" data-sitekey="0x4AAAAAABrtQnGxdQd_-7gQ"></div>
+
+  <button type="submit">Send</button>
+  <p id="form-status" aria-live="polite"></p>
+</form>
+
                 </div>
             </div>
         </div>
@@ -478,47 +469,38 @@
         })();
     </script>
 -->
-    <script>
-    (function () {
-    const form = document.getElementById('contact-form');
-    const status = document.getElementById('form-status');
+<script>
+(function () {
+  const form = document.getElementById('contact-form');
+  const status = document.getElementById('form-status');
 
-    async function handleSubmit(e) {
-        e.preventDefault();
-        status.textContent = 'Sending...';
+  async function handleSubmit(e) {
+    e.preventDefault();
+    status.textContent = 'Sending...';
 
-        const data = new FormData(form);
+    const data = new FormData(form);
+    const token = document.querySelector('[name="cf-turnstile-response"]')?.value;
+    if (token) data.set('cf-turnstile-response', token);
 
-        // Grab the Turnstile token that the widget injects
-        const token = document.querySelector('[name="cf-turnstile-response"]')?.value;
-        if (token) data.set('cf-turnstile-response', token);
-
-        try {
-        const res = await fetch(form.action, {
-            method: 'POST',
-            body: data,
-            headers: { 'Accept': 'application/json' }
-        });
-
-        const body = await res.json().catch(() => ({}));
-
-        if (res.ok && body.success) {
-            form.reset();
-            if (window.turnstile) window.turnstile.reset();
-            status.textContent = 'Thanks, your message has been sent.';
-        } else {
-            const msg = body.errors?.map(e => e.message).join(', ') || 'Something went wrong. Please try again.';
-            status.textContent = msg;
-            if (window.turnstile) window.turnstile.reset();
-        }
-        } catch {
-        status.textContent = 'Network error. Please try again.';
+    try {
+      const res = await fetch(form.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } });
+      const body = await res.json().catch(() => ({}));
+      if (res.ok && body.success) {
+        form.reset();
         if (window.turnstile) window.turnstile.reset();
-        }
+        status.textContent = 'Thanks, your message has been sent.';
+      } else {
+        status.textContent = body.errors?.map(e => e.message).join(', ') || 'Something went wrong. Please try again.';
+        if (window.turnstile) window.turnstile.reset();
+      }
+    } catch {
+      status.textContent = 'Network error. Please try again.';
+      if (window.turnstile) window.turnstile.reset();
     }
+  }
 
-    form.addEventListener('submit', handleSubmit);
-    })();
-    </script>
+  form.addEventListener('submit', handleSubmit);
+})();
+</script>
 </body>
 </html>
