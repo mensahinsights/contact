@@ -1,4 +1,4 @@
-# MensahInsights
+# Mensah Insights
 
 > **Data Analytics & Business Intelligence**
 
