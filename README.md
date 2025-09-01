@@ -59,4 +59,4 @@ Visit [MensahInsights.ca](https://mensahinsights.ca) to:
 
 ## Contact
 
-Ready to transform your data challenges into opportunities? Visit the website and [drop me a line]([https://mensahinsights.ca](https://mensahinsights.github.io/contact/index.html) with details about your challenge. We'll arrange a no-strings chat to explore what's possible.
+Ready to transform your data challenges into opportunities? Visit the website and [drop me a line](https://mensahinsights.github.io/contact/index.html) with details about your challenge. We'll arrange a no-strings chat to explore what's possible.
