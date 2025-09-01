@@ -2,7 +2,7 @@
 
 > **Data Analytics & Business Intelligence**
 
-Welcome to MensahInsights.ca, the digital headquarters showcasing my work samples, thoughtful analysis, and fresh perspectives on data challenges facing businesses across the Greater Toronto Area.
+Welcome to [Mensah Insights | Data Analytics Solutions](https://mensahinsights.ca), the digital headquarters showcasing my work samples, thoughtful analysis, and fresh perspectives on data challenges facing businesses across the Greater Toronto Area.
 
 ## About Gamal
 
@@ -45,7 +45,7 @@ Working alongside your team to identify opportunities where data can solve real 
 
 Got a project keeping you up at night? A spreadsheet that's grown into a monster? Perhaps you're sitting on a goldmine of data but aren't quite sure how to dig in?
 
-Visit [MensahInsights.ca](https://mensahinsights.ca) to:
+Visit [Mensah Insights | Data Analytics Solutions](https://mensahinsights.ca) to:
 - Browse work samples and case studies
 - Learn more about my approach
 - Get in touch about your data challenges
